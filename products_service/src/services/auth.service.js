@@ -1,7 +1,7 @@
 const pool = require("../config/db");
 
 exports.authService = {
-  findByPK: async (id) => {
+  findByPk: async (id) => {
     const result = await pool.query("SELECT * FROM customers WHERE id = $1", [
       id,
     ]);
